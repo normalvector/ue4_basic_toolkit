@@ -78,13 +78,66 @@ A collection of basic geometric primitives, with varying subdivisions.
 
 **TODO:** Some of these need their UVs checking.
 
+
+### ```Content\Materials\SimplePBR```
+A collection of basic materials based on a single simple material which gives direct access to the PBR settings for UE4 materials.
+
+* **M_SimplePBR** - A basic material to allow quick creation of simple materials.
+
+* **M_GlowingPlasticBlack** - A glowing black plastic material instance (Based on M_SimplePBR).  Doesn't quite work but here to complete the set...
+* **M_GlowingPlasticBlue** - A glowing blue plastic material instance (Based on M_SimplePBR).
+* **M_GlowingPlasticCyan** - A glowing cyan plastic material instance (Based on M_SimplePBR).
+* **M_GlowingPlasticGreen** - A glowing green plastic material instance (Based on M_SimplePBR).
+* **M_GlowingPlasticPurple** - A glowing purple plastic material instance (Based on M_SimplePBR).
+* **M_GlowingPlasticRed** - A glowing red plastic material instance (Based on M_SimplePBR).
+* **M_GlowingPlasticWhite** - A glowing white plastic material instance (Based on M_SimplePBR).
+* **M_GlowingPlasticYellow** - A glowing yellow plastic material instance (Based on M_SimplePBR).
+
+* **M_Mirror** - A simple metallic mirrored material instance (Based on M_SimplePBR).
+
+* **M_RoughMetalBlack** - A rough black metal material instance (Based on M_SimplePBR).
+* **M_RoughMetalBlue** - A rough blue metal material instance (Based on M_SimplePBR).
+* **M_RoughMetalCyan** - A rough cyan metal material instance (Based on M_SimplePBR).
+* **M_RoughMetalGreen** - A rough green metal material instance (Based on M_SimplePBR).
+* **M_RoughMetalPurple** - A rough purple metal material instance (Based on M_SimplePBR).
+* **M_RoughMetalRed** - A rough red metal material instance (Based on M_SimplePBR).
+* **M_RoughMetalWhite** - A rough white metal material instance (Based on M_SimplePBR).
+* **M_RoughMetalYellow** - A rough yellow metal material instance (Based on M_SimplePBR).
+
+* **M_RoughPlasticBlack** - A rough black plastic material instance (Based on M_SimplePBR).
+* **M_RoughPlasticBlue** - A rough blue plastic material instance (Based on M_SimplePBR).
+* **M_RoughPlasticCyan** - A rough cyan plastic material instance (Based on M_SimplePBR).
+* **M_RoughPlasticGreen** - A rough green plastic material instance (Based on M_SimplePBR).
+* **M_RoughPlasticPurple** - A rough purple plastic material instance (Based on M_SimplePBR).
+* **M_RoughPlasticRed** - A rough red plastic material instance (Based on M_SimplePBR).
+* **M_RoughPlasticWhite** - A rough white plastic material instance (Based on M_SimplePBR).
+* **M_RoughPlasticYellow** - A rough yellow plastic material instance (Based on M_SimplePBR).
+
+* **M_ShinyMetalBlack** - A shiny black metal material instance (Based on M_SimplePBR).
+* **M_ShinyMetalBlue** - A shiny blue metal material instance (Based on M_SimplePBR).
+* **M_ShinytMetalCyan** - A shiny cyan metal material instance (Based on M_SimplePBR).
+* **M_ShinyMetalGreen** - A shiny green metal material instance (Based on M_SimplePBR).
+* **M_ShinyMetalPurple** - A shiny purple metal material instance (Based on M_SimplePBR).
+* **M_ShinyMetalRed** - A shiny red metal material instance (Based on M_SimplePBR).
+* **M_ShinyMetalWhite** - A shiny white metal material instance (Based on M_SimplePBR).
+* **M_ShinyMetalYellow** - A shiny yellow metal material instance (Based on M_SimplePBR).
+
+* **M_ShinyPlasticBlack** - A shiny black plastic material instance (Based on M_SimplePBR).
+* **M_ShinyPlasticBlue** - A shiny blue plastic material instance (Based on M_SimplePBR).
+* **M_ShinytPlasticCyan** - A shiny cyan plastic material instance (Based on M_SimplePBR).
+* **M_ShinyPlasticGreen** - A shiny green plastic material instance (Based on M_SimplePBR).
+* **M_ShinyPlasticPurple** - A shiny purple plastic material instance (Based on M_SimplePBR).
+* **M_ShinyPlasticRed** - A shiny red plastic material instance (Based on M_SimplePBR).
+* **M_ShinyPlasticWhite** - A shiny white plastic material instance (Based on M_SimplePBR).
+* **M_ShinyPlasticYellow** - A shiny yellow plastic material instance (Based on M_SimplePBR).
+
 ### Graphic_Resources\\Meshes\\Basic_Primitives
 This directory contains all of the source .fbx files for ```Content\\Meshes\\Basic_Primitives```, and also the Modo .lxo file where these were created.
 
 ## License
 MIT License
 
-Copyright (c) 2016 Paul Golds
+Copyright (c) 2016-2017 Paul Golds
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
