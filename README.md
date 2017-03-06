@@ -82,6 +82,7 @@ A collection of basic geometric primitives, with varying subdivisions.
 A collection of material functions to make it easier to create new materials, all prefixed with **NVec** to help keep them separate from any other material functions which may be part of the setup.
 
 * **NVecApplyNormalStrength** - Scales a normal map to the strength indicated, either strengthening or weakening the effect.
+* **NVecSimpleHeightmapDisplacement** - Calculates the vector displacement for a heightmap, with scaling.
 * **NVecTintColor** - Simple desaturation/tint function to allow user-control over colours.
 
 ### ```Content\\Materials\\SimplePBR```
@@ -140,10 +141,18 @@ A collection of basic materials based on a single simple material which gives di
 A base material which allows a set of PBR textures to be applied according to the object's UVs, and which uses a combined Roughness/Metallic/AmbientOcclusion map to save on texture accesses.
 
 * **M_SimpleTexturedPBRUsingRMA** - A base material which can be instanced to allow different textures/settings to be used.
-* **MI_GroundGrass** - A simple grass material instance (Based on  A combined roughness/metallic/ambient)
-* **MI_GroundMedievalPavement** - A simple pavement instance  (Based on  A combined roughness/metallic/ambient)
-* **MI_ImperialHangarFloor** - A sci-fi floor material instance  (Based on  A combined roughness/metallic/ambient)
-* **MI_MordorRock** - A rock material instance (Based on  A combined roughness/metallic/ambient)
+* **MI_GroundGrass** - A simple grass material instance (Based on M_SimpleTexturedPBRUsingRMA)
+* **MI_GroundMedievalPavement** - A simple pavement instance  (Based on  M_SimpleTexturedPBRUsingRMA)
+* **MI_ImperialHangarFloor** - A sci-fi floor material instance  (Based on  M_SimpleTexturedPBRUsingRMA)
+* **MI_MordorRock** - A rock material instance (Based on  M_SimpleTexturedPBRUsingRMA)
+
+### ```Content\\\Materials\\\SimpleTexturedPBRUsingRMAWithHeightmap```
+A base material which allows a set of PBR textures to be applied according to the object's UVs, and which uses a combined Roughness/Metallic/AmbientOcclusion map to save on texture accesses, and also a heightmap which controls the displacement on an (optionally) tessellated geometry.
+
+* **M_SimpleTexturedPBRUsingRMAWithHeightmap** - A base material which can be instanced to allow different textures/settings to be used.
+* **MI_GroundGrassWithHeightmap** - A simple grass material instance (Based on M_SimpleTexturedPBRUsingRMAWithHeightmap)
+* **MI_GroundMedievalPavementWithHeightmap** - A simple pavement instance  (Based on  M_SimpleTexturedPBRUsingRMAWithHeightmap)
+* **MI_MordorRockWithHeightmap** - A rock material instance (Based on M_SimpleTexturedPBRUsingRMAWithHeightmap)
 
 ### ```Graphic_Resources\\Meshes\\Basic_Primitives```
 This directory contains all of the source .fbx files for ```Content\\Meshes\\Basic_Primitives```, and also the Modo .lxo file where these were created.
