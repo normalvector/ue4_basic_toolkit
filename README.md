@@ -78,8 +78,13 @@ A collection of basic geometric primitives, with varying subdivisions.
 
 **TODO:** Some of these need their UVs checking.
 
+### ```Content\\Materials\\MaterialFunctions```
+A collection of material functions to make it easier to create new materials, all prefixed with **NVec** to help keep them separate from any other material functions which may be part of the setup.
 
-### ```Content\Materials\SimplePBR```
+* **NVecApplyNormalStrength** - Scales a normal map to the strength indicated, either strengthening or weakening the effect.
+* **NVecTintColor** - Simple desaturation/tint function to allow user-control over colours.
+
+### ```Content\\Materials\\SimplePBR```
 A collection of basic materials based on a single simple material which gives direct access to the PBR settings for UE4 materials.
 
 * **M_SimplePBR** - A basic material to allow quick creation of simple materials.
@@ -131,10 +136,53 @@ A collection of basic materials based on a single simple material which gives di
 * **M_ShinyPlasticWhite** - A shiny white plastic material instance (Based on M_SimplePBR).
 * **M_ShinyPlasticYellow** - A shiny yellow plastic material instance (Based on M_SimplePBR).
 
-### Graphic_Resources\\Meshes\\Basic_Primitives
+### ```Content\\\Materials\\\SimpleTexturedPBRUsingRMA```
+A base material which allows a set of PBR textures to be applied according to the object's UVs, and which uses a combined Roughness/Metallic/AmbientOcclusion map to save on texture accesses.
+
+* **M_SimpleTexturedPBRUsingRMA** - A base material which can be instanced to allow different textures/settings to be used.
+* **MI_GroundGrass** - A simple grass material instance (Based on  A combined roughness/metallic/ambient)
+* **MI_GroundMedievalPavement** - A simple pavement instance  (Based on  A combined roughness/metallic/ambient)
+* **MI_ImperialHangarFloor** - A sci-fi floor material instance  (Based on  A combined roughness/metallic/ambient)
+* **MI_MordorRock** - A rock material instance (Based on  A combined roughness/metallic/ambient)
+
+### ```Graphic_Resources\\Meshes\\Basic_Primitives```
 This directory contains all of the source .fbx files for ```Content\\Meshes\\Basic_Primitives```, and also the Modo .lxo file where these were created.
 
+### ```Graphic_Resources\\Textures\\Samples```
+Some sample textures for material use, all based on assets from [Substance Share](https://share.allegorithmic.com/).  More details in License.
+
+* **ground_grass_Base_Color** - The base colour map for a grass texture, exported from [Grassy Ground](https://share.allegorithmic.com/libraries/40), by [Game Textures](http://gametextures.com)
+* **ground_grass_Height** - The height map for a grass texture, exported from [Grassy Ground](https://share.allegorithmic.com/libraries/40), by [Game Textures](http://gametextures.com)
+* **ground_grass_Normal** - The normal map for a grass texture, exported from [Grassy Ground](https://share.allegorithmic.com/libraries/40), by [Game Textures](http://gametextures.com)
+* **ground_grass_RMA** - A combined roughness/metallic/ambient map for a grass texture, exported from [Grassy Ground](https://share.allegorithmic.com/libraries/40), by [Game Textures](http://gametextures.com)]
+* **ground_medieval_pavement_Base_Color** - The base colour map for a pavement texture, exported from [Medieval Pavement](https://share.allegorithmic.com/libraries/42) by [Game Textures](http://gametextures.com)
+* **ground_medieval_pavement_Height** - The height map for a grass pavement, exported from [Medieval Pavement](https://share.allegorithmic.com/libraries/42) by [Game Textures](http://gametextures.com)
+* **ground_medieval_pavement_Normal** - The normal map for a grass pavement, exported from [Medieval Pavement](https://share.allegorithmic.com/libraries/42) by [Game Textures](http://gametextures.com)
+* **ground_medieval_pavement_RMA** - A combined roughness/metallic/ambient map for a pavement texture, exported from [Medieval Pavement](https://share.allegorithmic.com/libraries/42) by [Game Textures](http://gametextures.com)
+* **ImperialHangarFloor_Base_Color** - The base colour map for a sci-fi floor texture, exported from [Imperial Hangar Floor](https://share.allegorithmic.com/libraries/2004), by [staniszewskiryan](https://share.allegorithmic.com/libraries?by_user_id=6023)
+* **ImperialHangarFloor_Normal** - The normal map for a sci-fi floor texture, exported from [Imperial Hangar Floor](https://share.allegorithmic.com/libraries/2004), by [staniszewskiryan](https://share.allegorithmic.com/libraries?by_user_id=6023)
+* **ImperialHangarFloor_Base_Color** - A combined roughness/metallic/ambient map for a sci-fi floor texture, exported from [Imperial Hangar Floor](https://share.allegorithmic.com/libraries/2004), by [staniszewskiryan](https://share.allegorithmic.com/libraries?by_user_id=6023)
+* **Mordor_Rock_Base_Color** -The base colour map for rock texture, exported from [mordor_rock](https://share.allegorithmic.com/libraries/999) by [bewarethemidgets](https://share.allegorithmic.com/libraries?by_user_id=5475)
+* **Mordor_Rock_height** -The height map for rock texture, exported from [mordor_rock](https://share.allegorithmic.com/libraries/999) by [bewarethemidgets](https://share.allegorithmic.com/libraries?by_user_id=5475)
+* **Mordor_Rock_Normal** -The normal map for rock texture, exported from [mordor_rock](https://share.allegorithmic.com/libraries/999) by [bewarethemidgets](https://share.allegorithmic.com/libraries?by_user_id=5475)
+* **Mordor_Rock_RMA** - A combined roughness/metallic/ambient map for rock texture, exported from [mordor_rock](https://share.allegorithmic.com/libraries/999) by [bewarethemidgets](https://share.allegorithmic.com/libraries?by_user_id=5475)
+
+The RMA (Roughess/Metallic/Ambient) maps here were processed using the ```convert.exe``` file which is part of [ImageMagick](https://www.imagemagick.org/script/index.php) to combine the separate roughness, metallic and ambient occlusion maps into a single image.  The command to do this is:
+```convert.exe ground_grass_Roughness.png ground_grass_Metallic.png ground_grass_Ambient_Occlusion.png -combine ground_grass_RMA.png```
+
 ## License
+Some of the textures provided were created directly from assets downloaded from [Substance Share](https://share.allegorithmic.com/), and licensed under the [Substance Share license agreement](https://www.allegorithmic.com/legal/substance-share), these include:
+
+
+* [Grassy Ground](https://share.allegorithmic.com/libraries/40), by [Game Textures](http://gametextures.com)
+* [Imperial Hangar Floor](https://share.allegorithmic.com/libraries/2004), by [staniszewskiryan](https://share.allegorithmic.com/libraries?by_user_id=6023)
+* [mordor_rock](https://share.allegorithmic.com/libraries/999) by [bewarethemidgets](https://share.allegorithmic.com/libraries?by_user_id=5475)
+* [Medieval Pavement](https://share.allegorithmic.com/libraries/42) by [Game Textures](http://gametextures.com)
+
+
+Everything else is...
+
+
 MIT License
 
 Copyright (c) 2016-2017 Paul Golds
